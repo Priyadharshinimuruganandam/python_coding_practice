@@ -1,0 +1,1004 @@
+# task 1
+"""
+print("Enter '0' for exit.");
+ch = input("Enter any character: ");
+if ch == '0':
+    exit();
+else:
+    if((ch>='a' and ch<='z') or (ch>='A' and ch<='Z')):
+    	print(ch, "is an alphabet.");
+    else:
+    	print(ch, "is not an alphabet.");
+"""
+
+# method 2==========================================================================================
+"""
+i = input("enter input :")
+alp ='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+if i in alp:
+    print("its a alphabet")
+else:
+    print("its not a alphabet")
+
+"""
+#===================================================================================================
+# task 2
+"""
+x = input('Enter your letter: ')
+if (x=='a' or x=='e' or x=='i' or x=='o' or x=='u' or x=='A' or x=='E' or x=='I' or x=='O' or x=='U'):
+     print(x,"the letter is vowel")
+else: 
+     print(x,"the letter is not vowel")
+"""
+#===================================================================================================
+# task 3
+"""
+a = int(input('Enter a starting year: '))
+b = int(input('enter a ending year :'))
+for i in range(a,b+1,1):
+    if (i%4==0) and (i%100!=0):
+        print(i,"year is leap year")
+    elif (i%100==0) and (i%400==0):
+        print(i,"year is leap year")
+    elif(i%400==0):
+        print(i,"year is leap year")
+    else:
+        print(i,"is not a leap year")
+"""
+#===================================================================================================
+# task 4
+"""
+import random
+"""
+"""
+a = random.randrange(100)
+print(a)
+b = (random.choice([3,5,7,9,10]))
+print(b)
+print (random.randrange(20, 50, 3))
+
+for i in range (20,50,3):
+    print(i)
+
+print (random.random())
+
+random.seed(7)
+"""
+#===================================================================================================
+"""
+def main():
+      stdout=input("Hello Python")
+      print(stdout)
+
+
+main()
+"""
+#===================================================================================================
+"""
+print("perform addition press 1")
+print("perform subtraction press 2")
+print("perform multiplication press 3")
+print("perform division press 4")
+a = int(input("\nenter a number to perform calculation:"))
+b = int(input("enter 1st number"))
+c = int(input("enter a 2nd number"))
+
+if a ==1:
+      print(b+c)
+elif a==2:
+      print(b-c)
+elif a==3:
+      print(b*c)
+else:
+      print(b/c)
+
+   """ 
+
+#===================================================================================================
+
+"""
+# task 6
+
+#getting 100 year 
+import time
+t=time.localtime()
+name = input(str("enter your name:"))
+age = int(input("enter your age:"))
+print(f"hello {name}, now your age is {age}")
+years = ((100 - age)+ t[0])
+print(f"you will turn 100 in {years}")
+"""
+#===================================================================================================
+"""
+#task 7
+#odd and even 
+
+number1 = int(input("enter a number:"))
+number2 = int(input("enter a number:"))
+
+if(number1 % number2 == 0):
+      print("even")
+else:
+      print("odd")
+"""
+"""
+if(number1 %4==0): #to check the number is divisible for 4
+      print("your number is divisible by 4 and even")
+elif(number1 %2==0): #to check the numebr is even
+      print("even")
+else:
+      print("odd")#else condion is for odd numbers
+"""
+#===================================================================================================
+"""
+# task 8 list
+#getting less number in list by user input
+number1 = int(input("enter a number:"))
+list1 = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+listcomp = [i for i in list1 if i < number1]#using list comprehension  
+print(listcomp)
+"""
+#===================================================================================================
+#task 9 division
+"""
+number1 = int(input("enter a number:"))
+list1 = [i*number1 for i in range(1,11)] #list comparision 
+print(list1)
+"""
+#===================================================================================================
+#task 10 
+"""
+list1 = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+list2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+print(list(set(list1+list2))) # adding the list but removing the duplicate
+"""
+#===================================================================================================
+# task 11
+#getting values and store in list
+"""
+number2 = []
+for i in range(0,5):
+    number1 = int(input("enter a number:"))
+    number2.append(number1)
+
+print(number2)
+"""
+#===================================================================================================
+#task 12
+#palindrome
+"""
+string1 = (input("enter a word:"))
+if (string1 == string1[::-1]):
+    print("palindrome")
+else:
+    print("not palindrome")
+"""
+#===================================================================================================
+#task 13
+#reverse letter
+"""
+string1 = (input("enter a word:"))
+print(string1[::-1])
+print(string1[-1::-1])
+for i in a:
+"""
+#===================================================================================================
+#task 14
+#reverse word
+"""
+string1 = (input("enter a word:"))
+a = string1.split(" ")
+print(a[::-1])
+"""
+#===================================================================================================
+#task 15
+#reverse letter in word
+"""
+string1 = (input("enter a word:").split(" "))
+for i in string1:
+    print(i[::-1])
+"""
+#===================================================================================================
+#task 16
+"""
+#even numbers in list comparision
+#number1 = int(input("enter a number:"))
+list1 = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+listcomp = [i for i in list1 if i%2==0]#using list comprehension  
+print(listcomp)
+"""
+#===================================================================================================
+#task 17
+"""
+#rock paper scissor game
+def Running():
+    player1 = (input("player1 enter a ROCK , PAPER , SCISSOR:"))
+    player2 = (input("player2 enter a ROCK , PAPER , SCISSOR:"))
+    if (player1 == player2):
+        print("coincidence play again")
+    elif((player1 == 'rock' and player2 == 'scissor') or (player1 == 'paper' and player2 == 'rock') or (player1 == 'scissor' and player2 == 'paper')):
+        print("player one won ")
+    elif((player2 == 'rock' and player1 == 'scissor') or (player2 == 'paper' and player1 == 'rock') or (player2 == 'scissor' and player1 == 'paper')):
+        print("player two won")
+    elif((player2 == 'rock' and player1 == 'paper') or (player2 =='paper' and player1 == 'scissor') or (player2 == 'scissor' and player1 == 'rock')):
+        print("player one won")
+    elif((player1 == 'rock' and player2 == 'paper') or (player1 =='paper' and player2 == 'scissor') or (player1 == 'scissor' and player2 == 'rock')):
+        print("player two won")
+
+while(True):
+    user1 = (input("do u want to play y / n"))
+    if user1 == 'y':
+        Running()
+        continue
+    elif user1 == 'n':
+        break
+    else:
+        user1 = (input("do u want to play y / n"))
+"""
+#===================================================================================================
+"""
+#task 18
+# game
+
+
+import random
+Running = True
+
+
+def Running():
+    comp = random.randint(0,10)
+    user = int(input("enter a number: "))
+    if user == comp:
+        print(f"both are equal its value is: {comp}")
+    elif user > comp:
+        print(f"ur value is greater its value is: {comp}")
+    elif user < comp:
+        print(f"ur value is less its value is: {comp}")
+
+while(True):
+    user1 = (input("do u want to play y / n"))
+    if user1 == 'y':
+        Running()
+        continue
+    elif user1 == 'n':
+        break
+    else:
+        user1 = (input("do u want to play y / n"))
+#===================================================================================================
+#task 19
+"""
+"""
+list1 = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+list2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+comp = [n for i in list1 for n in list2 if i == n]
+#comp2 = [n for n in list2 if i != n ]
+print(list(comp))
+
+list1 = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+print(list1[::len(list1)-1])
+
+#printinh 1st and last number
+"""
+#===================================================================================================
+#task 20
+#list ends
+"""
+def lis():
+    list1 = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+    print([list1[0],(list1)[len(list1)-1]])
+lis()
+"""
+#task 21==================================================================
+#finding the letter is there
+"""
+def finding(n):
+    list1 = [1, 8, 2, 3, 5, 8, 13, 21, 4, 55, 89, 5]
+    list1.sort()
+    print(n in list1)
+
+finding(9)
+"""
+#===================================================================================================
+#task 22
+# split 3 words
+"""
+word = "privicbab"
+print([word[i:i+3] for i in range(0, len(word), 3)]) 
+"""
+#===================================================================================================
+#task 23
+#Birthday dictionary
+"""
+Birthday = { "vicky" : "25/03/1996",
+             "renu" : "16/08/1972",
+             "jaga" : "20/12/1960",
+             "priya":"15/02/1996",
+             "sasi":"11/09/1979",
+             "muruga" : "25/08/1969",
+             "jee" : "24/04/2004"}
+
+print("Welcome to the birthday dictionary!!! the names are")
+for key in Birthday:
+    print(key)
+name = str(input("enter the name of the person to fine his/her birthday:"))
+print(Birthday[name])
+update = input("Do you want to update a person y/n:")
+if update == 'y' or 'Y':
+    detail = input("enter the data of the person in this format ..name,DOB..  ")
+    key, value = detail.split(",")
+    Birthday[key]=value
+    print("thankyou the given data has been updated")
+    for key, values in Birthday.items():
+        print(key, values)
+else:
+    print("thank you have a good day")
+
+#===================================================================================================
+# printing number and adding number
+"""
+"""
+user = int(input("enter a number: "))
+user1 = (str(user)+str(user)+str(user))
+user2 = (str(user)+str(user))
+user3 = (str(user))
+print(user1 , user2 , user3)
+print(int(user1) + int(user2) + int(user3))
+"""
+#===================================================================================================
+#task 24
+#tic toe
+#def allocation():
+"""
+number = (input("enter a number:"))
+x = int(number)
+number[x] = 'X'
+print(number[1] + '|' + number[2] + '|' + number[3])
+print('-+-+-')
+"""
+"""
+board = ['  '] 
+def drawBoard(board):
+     # This function prints out the board that it was passed.
+
+     # "board" is a list of 10 strings representing the board (ignore index 0).
+     print(board[0] + '|' + board[1] + '|' + board[2])
+     print('-+-+-')
+drawBoard()
+"""
+"""
+board = ['_']*9
+def print_board():
+    print(board[0] + '|' + board[1] + '|' + board[2])
+    print(board[3] + '|' + board[4] + '|' + board[5])
+    print(board[6] + '|' + board[7] + '|' + board[8])
+print_board()
+
+while True:
+    number = (input("enter a number:"))
+    x = int(number)
+    number[x] = 'x'
+    print_board()
+"""
+#getting marks 
+"""
+#===================================================================================================
+# task 25
+from operator import itemgetter
+from collections import OrderedDict
+marks = {
+         {"name":"jay", "english":90, "tamil":80, "maths":70, "science":70, "social":89},
+         {"name":"priya", "english":80, "tamil":90, "maths":78, "science":100, "social":99},
+         {"name":"vicky", "english":92, "tamil":50, "maths":79, "science":80, "social":100},
+         {"name":"pallavi", "english":80, "tamil":40, "maths":70, "science":90, "social":99},
+         {"name":"banu", "english":99, "tamil":80, "maths":70, "science":90, "social":89}
+         }
+
+#print(marks["jay"])
+a = OrderdDict(sorted(marks["jay"].items(), key=itemgetter(1)))
+#a = sorted([(value,"jay") for("jay",value) in marks.items()]) 
+print(a)
+"""
+#example for nested dict
+"""
+worst = sorted(Player(v,k) for (k,v) in d.items())
+people = {1: {'name': 'John', 'age': '27', 'sex': 'Male'},
+          2: {'name': 'Marie', 'age': '22', 'sex': 'Female'}}
+
+print(people[1]['name'])
+print(people[1]['age'])
+print(people[1]['sex'])
+"""
+#game board
+"""
+board = ["---"] *12
+def fake_board():
+    print(" "+ board[0] + " " + board[1]+" "+ board[2])
+    print("|" +"   "+"|"+"   "+"|"+"   "+"|")
+    print(" "+board[3]+" " + board[4]+" " + board[5])
+    print("|" +"   "+"|"+"   "+"|"+"   "+"|")
+    print(" "+board[6]+" " + board[7]+" " + board[8])
+    print("|" +"   "+"|"+"   "+"|"+"   "+"|")
+    print(" "+board[9]+" " + board[10]+" " + board[11])
+fake_board()
+"""
+#===================================================================================================
+#max of three
+"""
+def maxi(number1,number2,number3):
+    if number1>number2 and number1>number3:
+        print("number 1 is greatest")
+    elif number2>number3 and number2>number1:
+        print("number 2 is greatest")
+    else:
+        print("number 3 is greatest")
+num1 = (input("enter a number:"))
+num2 = (input("enter a number:"))
+num3 = (input("enter a number:"))
+print(maxi(num1,num2,num3))
+"""
+#===================================================================================================
+#fun with palindrom
+"""
+def is_palindrome(word):
+    if word.lower() == word[::-1].lower():
+        return True
+    else:
+        return False   
+print(is_palindrome('Deleveled'))      
+"""
+#===================================================================================================
+#key with same value
+"""
+dict1 = {'pd':1,'vic':2,'rek':1,'vas':2}
+print([k for k,v in dict1.items() if v == 2])
+"""
+#===================================================================================================
+"""
+def find_two_sum(numbers, target_sum):
+    for i in numbers:
+        for j in numbers:
+            if (i+j == target_sum):
+                print('{i} {j} is a target is equal to 10')
+            else:
+    return None
+
+print(find_two_sum([3, 1, 5, 7, 5, 9], 10))
+
+def find(numbers):
+  for i in numbers:
+    for j in numbers:
+      if (i+j == 10):
+        print(f'{i} {j} is a target is equal to 10')
+      
+find([3, 1, 5, 7, 5, 9])
+"""
+#===================================================================================================
+"""
+def unique_names(name1, name2):
+  print(name1 | name2)
+
+unique_names(["Ava", "Emma", "Olivia"], ["Olivia", "Sophia", "Emma"])
+
+"""
+#===================================================================================================
+"""
+n = 6
+pro = 1
+for i in range(1,n+1):
+  pro = i * pro 
+
+print(pro)
+
+x = 7
+product = 1
+
+for item in range(1, x + 1):
+    product = item * product
+
+print(product)
+
+"""
+#===================================================================================================
+"""
+def finding(*sample):
+  sample1 = [ i for i in sample if (len(i)==2 or len(i)>2) and i[0] == i[-1] ]
+  print(len(sample1))
+finding('aca', 'xyz', 'aba', '1221')
+
+"""
+#===================================================================================================
+"""
+def five():
+  addition = 5+5
+  print(addition)
+  return addition
+result = five()
+print(result)
+"""
+#===================================================================================================
+"""
+
+def speed(a):
+    points = 2
+    point = 2
+    while (point <= 12):
+      if a < 70:
+        print("ok")
+        break
+      elif a > 70:
+        print("your point is",point)
+        point += points
+        if point == 12:
+          print("your license is suspended")
+    
+speed(80)
+
+"""
+#===================================================================================================
+"""
+def num(limit):
+    for i in range(0,limit+1):
+        if i%2==0:
+            print(f"EVEN...{i}")
+        else :
+            print(f"ODD....{i}")
+ans = int(input("enter a number"))
+num(ans)
+
+"""
+#===================================================================================================
+
+"""
+ list_one = ['priya','vic','jee']
+ frind = [i.capitalize() for i in list_one]
+ print(frind)
+"""
+"""
+ name=['vic','priya','jee']
+ last_seen = [10,20,30]
+
+ finaly = {name[i]:last_seen[i] for i in range(len(name))}
+ print(finaly)
+
+ fin = dict(zip(name, last_seen))
+ print(fin)
+
+ numbers = list(range(10))
+ doubled = [n*2 for n in numbers]
+ print(doubled)
+ """
+"""
+#===================================================================================================
+import random
+
+# # # This line creates a set with 6 random numbers
+lottery_numbers = set(random.sample(list(range(22)), 6))
+
+# # # Here are your players; find out who has the most numbers matching lottery_numbers!
+players = [
+    {'name': 'Rolf', 'numbers': {1, 3, 5, 7, 9, 11}},
+    {'name': 'Charlie', 'numbers': {2, 7, 9, 22, 10, 5}},
+    {'name': 'Anna', 'numbers': {13, 14, 15, 16, 17, 18}},
+    {'name': 'Jen', 'numbers': {19, 20, 12, 7, 3, 5}}
+]
+
+player_one = players[0]
+player_two = players[1]
+player_three = players[2]
+player_four = players[3]
+
+numberone = (len(player_one['numbers'].intersection(lottery_numbers)))
+winnings1 = 100 ** numberone 
+numbertwo = (len(player_two['numbers'].intersection(lottery_numbers)))
+winnings2 = 100 ** numbertwo 
+numberthree = (len(player_three['numbers'].intersection(lottery_numbers)))
+winning3 = 100 ** numberthree 
+numberfour = (len(player_four['numbers'].intersection(lottery_numbers)))
+winning4 = 100 ** numberfour 
+
+if ((numberone > numbertwo) and (numberone > numberthree) and (numberone > numberfour)):
+    print("Rolf won")
+    print(winnings1)
+elif ((numbertwo > numberone) and (numbertwo > numberthree) and (numbertwo > numberfour)):
+    print("Charlie won")
+    print(winnings2)
+elif ((numberthree > numberone) and (numberthree > numbertwo) and (numberthree > numberfour)):
+    print("Anna won")
+    print(winning3)
+else:
+    print("Jen won")
+    print(winning4)
+  
+
+print("Jen won 1000")
+
+winnings = 100 ** numberone
+#===================================================================================================
+
+
+"""
+# numbers = list(range(101))
+
+# double = [n*5 for n in numbers]
+
+# print(double)
+"""
+#===================================================================================================
+lottery_numbers = {13, 21, 22, 5, 8}
+
+players = [{
+    'name': 'vic',
+    'numbers': {2, 7, 9, 5, 8}
+},
+{
+    'name': 'priya',
+    'numbers': {5, 1, 9, 6, 3}
+}
+]
+
+player_one = players[0]
+player_two = players[1]
+
+numberone = (len(player_one['numbers'].intersection(lottery_numbers)))
+print('vic' + str(numberone) + 'right!' )
+numbertwo = (len(player_two['numbers'].intersection(lottery_numbers)))
+print('priya' + str(numbertwo) + 'right!')
+"""
+#===================================================================================================
+"""
+
+import random
+
+# This line creates a set with 6 random numbers
+lottery_numbers = set(random.sample(list(range(22)), 6))
+
+# Here are your players; find out who has the most numbers matching lottery_numbers!
+players = [
+    {'name': 'Rolf', 'numbers': {1, 3, 5, 7, 9, 11}},
+    {'name': 'Charlie', 'numbers': {2, 7, 9, 22, 10, 5}},
+    {'name': 'Anna', 'numbers': {13, 14, 15, 16, 17, 18}},
+    {'name': 'Jen', 'numbers': {19, 20, 12, 7, 3, 5}}
+]
+
+
+ 
+
+# Then, print out a line such as "Jen won 1000.".
+print("Jen won 1000")
+# The winnings are calculated with the formula:
+winnings = 100 ** len(lottery_numbers)
+# 100 ** len(numbers_matched)
+"""
+#===================================================================================================
+"""
+import random
+ 
+# This line creates a set with 6 random numbers
+lottery_numbers = set(random.sample(list(range(22)), 6))
+ 
+# Here are your players; find out who has the most numbers matching lottery_numbers!
+players = [
+    {'name': 'Rolf', 'numbers': {1, 3, 5, 7, 9, 11}},
+    {'name': 'Charlie', 'numbers': {2, 7, 9, 22, 10, 5}},
+    {'name': 'Anna', 'numbers': {13, 14, 15, 16, 17, 18}},
+    {'name': 'Jen', 'numbers': {19, 20, 12, 7, 3, 5}}
+]
+ 
+# Then, print out a line such as "Jen won 1000.".
+# The winnings are calculated with the formula:
+# 100 ** len(numbers_matched)
+ 
+top_player = players[0]  # start by saying "the top matching player is the first one"
+ 
+for player in players:  # Go over each player
+    matched_numbers = len(player['numbers'].intersection(lottery_numbers))  # Calculate how many numbers they matched
+    if matched_numbers > len(top_player['numbers'].intersection(lottery_numbers)):  # If they matched more than the current top player...
+        top_player = player  # Say this player is the new top player
+ 
+# Calculate their winnings using the formula!
+winnings = 100 ** len(top_player['numbers'].intersection(lottery_numbers))
+ 
+# Then print out—here in Udemy we have to use .format, but normally you'd want to use f-strings.
+print('{} won {}.'.format(top_player['name'], winnings))
+"""
+#===================================================================================================
+"""
+import numpy as np
+z = np.array([[0, 7, 5], 
+              [3, 5, 3]])
+print(z[1, 2])
+
+import numpy as np
+z = np.array([[0, 7, 5], 
+              [3, 5, 3]])
+print(z[0, 2])
+
+import numpy as np
+a = np.array([1, 0, 1]) 
+b = np.array([2, 4, 6])
+print(a + b)
+
+import numpy as np
+z = np.array([[1, 4, 0], 
+              [3, 9, 8]])
+print(z[1:, :2])
+"""
+#===================================================================================================
+"""
+#try of flames
+
+your_name = input("Enter your name :") # input form the user
+crush_name = input("Enter your crush name :") # input from the user 
+letter1 = set(list(your_name)) #spliting a string into character
+letter2 = set(list(crush_name)) #spliting a crush name into character
+print(letter1,letter2)
+unique = (letter1 ^ letter2) #cancellation and length
+"""
+"""
+flames = ['f','l','a','m','e','s']
+a = flames.pop[2]
+print(a)
+"""
+
+
+
+
+"""for i in flames(len(unique)):
+  flames.pop(
+print(i)
+"""
+"""
+def is_palindrome(word):
+    if word.lower() == word[::-1].lower():
+        return True
+    else:
+        return False   
+print(is_palindrome('Deleveled'))
+"""
+"""
+a = 'priya'
+b = a[::-1]
+print(b)
+"""
+#===================================================================================================
+"""
+def group_by_owners(files):
+    new_dict = {}
+    for k, v in files.items():
+      return new_dict.setdefault(v, []).append(k)
+    
+files = {
+    'Input.txt': 'Randy',
+    'Code.py': 'Stan',
+    'Output.txt': 'Randy'
+}   
+print(group_by_owners(files))
+"""
+#===================================================================================================
+"""
+new_dict = {}
+for k, v in some_dict.iteritems():
+    new_dict.setdefault(v, []).append(k)
+
+
+
+def is_palindrome(word):
+    return None
+    
+print(is_palindrome('Deleveled'))
+"""
+#===================================================================================================
+"""
+dict1 = {'pd':1,'vic':2,'rek':1,'vas':2}
+print([k for k,v in dict1.items() if v == 2])
+
+"""
+#===================================================================================================
+"""
+def group_by_owners(files):
+    check =[k for k,v in files.items() if v == 'Randy']
+    return check
+files = {
+    'Input.txt': 'Randy',
+    'Code.py': 'Stan',
+    'Output.txt': 'Randy'
+}   
+print(group_by_owners(files))
+"""
+"""
+def find_two_sum(numbers, target_sum):
+    addit = [i for i in numbers if numbers[0] + i == target_sum]
+    print( numbers[0]+i,target_sum )
+print(find_two_sum([3, 1, 5, 7, 5, 9], 10))
+"""
+#===================================================================================================
+"""
+import itertools
+list1 = [3, 1, 5, 7, 5, 9]
+target = 10
+for a,b in itertools.combinations(list1, 2):
+  print(a,b)
+"""
+#===================================================================================================
+"""
+for i in (0,5):
+  for j in (0,5):
+    print(i,j)
+""" 
+"""
+def find(numbers):
+  for i in numbers:
+    for j in numbers:
+      if (i+j == 10):
+        print(f'{i} {j} is a targer is = to 10')
+      
+find([3, 1, 5, 7, 5, 9])
+"""
+#===================================================================================================
+"""
+tar = [i for i in list1 if list[0] + i == target]
+print(tar)
+"""
+"""
+def find_two_sum(numbers, target_sum):
+    for i in numbers:
+        for j in numbers:
+            if (i+j == target_sum):
+                print(f'{i} {j} is a target is equal to 10')
+            else:
+                None
+
+(find_two_sum([3, 1, 5, 7, 5, 9], 10))
+"""
+#===================================================================================================
+"""
+
+def unique_names(name1, name2):
+  name = (set(name1) | set(name2))
+  print(name)
+
+unique_names(["Ava", "Emma", "Olivia"], ["Olivia", "Sophia", "Emma"])
+"""
+"""
+list1 = [2, 5, 8, 9, 2, 5, 6]
+print(sum(list1))
+"""
+"""
+sample = [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
+sample.sort()
+print(sample)
+"""
+"""
+
+print(sorted([(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)], key=lambda x: x[1]))
+
+
+def finding(sample):
+  sample1 = [ i for i in sample if (len(i)==2 or len(i)>2) and i[0] == i[-1] ]
+  print(sample1)
+finding('aca', 'xyz', 'aba', '1221')
+"""
+#def ard(number):
+"""
+ard = 5
+product = 1
+for i in range(1,ard+1):
+  product *= i
+  print(product)
+"""
+"""
+product = 1  # Don't use 0 here, otherwise, you'll get zero 
+list = [1, 2, 3]
+for x in list:
+    product *= x
+"""
+"""
+def multiply(n):
+    total = 1
+    for i in range(0, len(n)):
+        total *= n[i]
+    print(total)
+    multiply(5)
+    """
+"""
+def finding_element():
+  empty = []
+  value = int(input("how many times you want to enter:"))
+  for i in range(0,value):
+    list1 = input("enter a number:")
+    ans = empty.append(list1)
+  
+  empty.sort()
+  print(f"largest number:{empty[-1]}")
+  print(f"second largest number:{empty[-2]}")
+  print(f"smallest number:{empty[0]}")
+  print(f"second smallest number:{empty[1]}")
+
+finding_element()
+
+"""
+
+
+#nested dictionary
+lottery_numbers = {13, 21, 22, 5, 8}
+
+players = [
+    {
+        'name': 'Rolf',
+        'numbers': (13, 22, 3, 8, 9)
+    },
+    {
+        'name': 'John',
+        'numbers': (22, 3, 5, 7, 9)
+    }
+]
+
+correct_one = players[0]['numbers'].intersection(lottery_numbers)
+correct_two = players[1]['numbers'].intersection(lottery_numbers)
+    
+length_one = len(correct_one)
+length_two = len(correct_two)
+    
+print(players[0]['name'],correct_one)
+print(players[1]['name'],correct_two)
+
+lottery_numbers = {13, 21, 22, 5, 8}
+ 
+
+players = [
+    {
+        'name': 'Rolf',
+        'numbers': {1, 3, 8, 22, 21}
+    },
+    {
+        'name': 'Jose',
+        'numbers': {4, 9, 10, 12, 15}
+    }
+]
+ 
+# For each of the two players, print out a string like this: "Player PLAYER_NAME got 3 numbers right.".
+# Of course, replace PLAYER_NAME by their name, and the 3 by the amount of numbers they matched with lottery_numbers.
+# You'll have to access each player's name and numbers, and calculate the intersection of their numbers with lottery_numbers.
+# Then construct a string and print it out.
+ 
+# Remember: the string must contain the player's name and the amount of numbers they got right!
+name = players[0]['name']
+numbers = players[0]['numbers'].intersection(lottery_numbers)
+print('Player {name} got {amount} numbers right.'.format(name=name, amount=len(numbers)))
+ 
+name = players[1]['name']
+numbers = players[1]['numbers'].intersection(lottery_numbers)
+print('Player {name} got {amount} numbers right.'.format(name=name, amount=len(numbers)))
+#===================================================================================================
+
+
+
+    user_input = input('Enter q or p: ')
+ 
+# Now we must repeat until they type 'q':
+while user_input != 'q':
+    # Inside our loop, check if they typed 'p'. If they did, print "Hello"
+    if user_input == 'p':
+        print("Hello")
+    # Now we must ask the user for their input again—otherwise we would be in an infinite loop!
+    user_input = input('Enter q or p: ')
+
+#===================================================================================================
+# The for loop
+
+"""
+The for loop lets us go over each element out of a series of elements. For example, each element of a list.
+"""
+
+primes = [2, 3, 5, 7, 11]
+for prime in primes:
+  print(f'{prime} is  a prime number.')
+
+
+kid_ages = (3, 7, 12)
+for age in kid_ages:
+  print(f'I have a {age} year old kid.')
+
+#===================================================================================================
+
