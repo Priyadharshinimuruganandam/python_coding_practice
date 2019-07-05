@@ -1,0 +1,394 @@
+# adding number using function
+
+def addNum(first,second):
+    add = (first + second)
+        return add
+    
+    add(23,2)
+#======================================================================================
+# print a given number
+
+num = 5
+a = input("enter a num:")
+print(num == a)
+#======================================================================================
+
+for i in range (100,0,-2):
+	print(i)
+	
+#======================================================================================
+
+# The range function
+
+
+for i in range(20):
+  print(i)
+
+
+print(range(10))
+#======================================================================================
+
+# Iteration of dictionaries
+
+
+
+my_friends = {
+    'Jose': 6,
+    'Rolf': 12,
+    'Anne': 6
+}
+
+for name, days in my_friends.items():
+    print(f'I last saw {name} {days} days ago.')
+
+
+
+
+print(my_friends.items())
+#======================================================================================
+
+friend_info = [('Jose', 6), ('Rolf', 12), ('Anne', 6)]
+for name, days in friend_info:
+    print(f'{name}, {days}')
+
+
+#======================================================================================
+# ditionary
+
+my_friends = {
+    'Jose': 6,
+    'Rolf': 12,
+    'Anne': 6
+}
+do_i_know = 'Anne'
+
+for name, days in my_friends.items():
+    if name == do_i_know:
+      print(f'I know {do_i_know}')
+
+"""
+You can do this:
+"""
+my_friends = {
+    'Jose': 6,
+    'Rolf': 12,
+    'Anne': 6
+}
+do_i_know = 'Anne'
+
+if do_i_know in my_friends:
+  print(f'I know {do_i_know}')
+
+
+#======================================================================================
+
+cars = ['ok', 'ok', 'ok', 'faulty', 'ok', 'ok']
+
+for car in cars:
+  if car == 'faulty':
+    print('Stopping the production line!')
+    break
+  print('This car is OK')
+
+#======================================================================================
+
+# even number with continue
+
+for num in range(2, 10):
+  if num % 2 == 0:
+    print("Found an even number", num)
+    continue
+  print("Found a number", num)
+
+#======================================================================================
+#find prime or not
+
+for n in range(2, 10):
+  for x in range(2, n):
+    if n % x == 0:
+      print(n, 'equals', x, '*', n//x)
+      break
+  else:
+    # loop fell through without finding a factor
+    print(n, 'is a prime number')
+#======================================================================================
+#fizzBuzz 
+
+for i in range(1,101):
+    if ((i%3==0) and (i%5==0)):
+        print("FizzBuzz")
+        continue
+    elif i%3==0:
+        print("Fizz")
+        continue
+    elif i%5==0:
+        print("Buzz")
+        continue
+    print(i)
+#======================================================================================
+# WORKING WITH LIST IN PYTHON
+"""
+n = int(input("enter a number"))
+ans = n + n*n + n*n*n
+print (ans)
+"""
+
+#======================================================================================
+                    #solution 1
+"""
+def a():
+    b=[10,20,30,40,50]
+    print(multiply(b))
+a()
+"""
+
+
+#======================================================================================
+                    #getting output from the user
+"""
+empty_list=[]
+a = int(input("enter a number of times:"))
+for i in range(0,a):
+    b=int(input("enter a number:"))
+    empty_list.append(b)
+    
+print(empty_list)
+print(sum(empty_list))
+"""
+
+#======================================================================================
+                        #solution 2 (wrong)
+"""
+def mul(a):
+    for i in a:
+        i *= a
+        print(i)
+mul([10,20,30,40,50])
+"""
+
+#======================================================================================
+                        #solution 3
+"""
+def a():
+    b=[10,20,30,40,50]
+    print(max(b))
+a()
+"""
+
+#======================================================================================
+                        #solution 4
+"""
+def a():
+    b=[10,20,30,40,50]
+    print(min(b))
+a()
+
+def list(a):
+    for i in a:
+        empty_list=[]
+        if i not in empty_list:
+            empty_list.append(i)
+
+print(list([10,20,30,10,20]))
+"""
+
+#======================================================================================
+                        #solution 5
+"""
+
+def rem_dup(lst):
+    return list(set(lst))
+
+print (rem_dup([1,1,2,2,3,3,4,5,6,6,7,8,9,10,10,10,11]))
+
+"""
+
+#======================================================================================
+                        #asending and descending (solution 6)
+"""
+a=[10,20,30,40,50,32,45,26]
+a.sort()
+print(a)
+
+a=[10,20,30,40,50,32,45,26]
+a.sort(reverse=True)
+print(a)
+
+
+"""
+
+#======================================================================================
+#sort by element
+
+"""
+#(2nd ele)
+def sec_element(fir):
+    return fir[1]
+    
+
+random = [(2, 2), (3, 4), (4, 1), (1, 3)]
+random.sort(key = sec_element)
+print('Sorted list:', random)
+
+#======================================================================================
+# take second element for sort
+def takeSecond(elem):
+    return elem[1]
+
+# random list
+random = [(2, 2), (3, 4), (4, 1), (1, 3)]
+
+# sort list with key
+random.sort(key=takeSecond)
+
+# print list
+print('Sorted list:', random)
+
+#======================================================================================
+#(1st element)
+random = [(2, 2), (3, 4), (4, 1), (1, 3)]
+random.sort()
+print('Sorted list:', random)
+
+"""
+
+#======================================================================================
+                #solution 8
+"""
+a = [10,20,30]
+if not a:
+    print("empty")
+else:
+    print("not empty")
+
+#======================================================================================
+a = [10,20,30]
+if len(a)==0:
+    print("empty")
+else:
+    print("not empty")
+"""
+
+#======================================================================================
+                #solution 9
+"""
+a = [10,20,30]
+b = a[::]
+print(a, b)
+
+
+a = [10,20,30]
+b = a.copy()
+print(a, b)
+"""
+
+#======================================================================================
+
+                #solution 10
+"""
+a = [10,100,40,30]
+b = [50,20,60,70]
+c = (set(a) & set(b))
+
+if len(c)>=1:
+    print("True")
+else:
+    print("False")
+"""
+
+#======================================================================================
+                    #solution 11
+"""
+a = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+a.remove(a[0])
+del a[3:5]
+print(a)
+
+
+#======================================================================================
+x=['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+x.pop(5)
+x.pop(4)
+x.pop(0)
+print (x)         
+
+"""
+
+#======================================================================================
+#different fun to remove 
+"""
+colors = ["violet", "indigo", "blue", "green", "yellow", "orange", "red"]
+del colors[4]
+colors.remove("blue")
+colors.pop(3)
+print(colors)
+
+"""
+
+#======================================================================================
+
+# FUNCTION DIFFERENCE INNER AND GLOABLE
+
+def outer_function():
+    global a
+    a = 20
+    def inner_function():
+        global a
+        a = 30
+        print('a =',a)
+
+    inner_function()
+    print('a =',a)
+     
+a = 10
+outer_function()
+print('a =',a)
+
+#======================================================================================
+x=['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+x.pop(5)
+x.pop(4)
+x.pop(0)
+print (x)         
+
+#======================================================================================
+"""
+                        #different fun to remove 
+"""
+colors = ["violet", "indigo", "blue", "green", "yellow", "orange", "red"]
+del colors[4]
+colors.remove("blue")
+colors.pop(3)
+print(colors)
+#======================================================================================
+"""
+                      #list comprehension
+#cube if number in the list
+"""
+lst = [2,3,4,5,6]
+a = [i*3 for i in lst]
+print(a)
+"""
+#======================================================================================
+#even numbers in a list
+"""
+lst = [i for i in range(0,20) if i%2==0]
+print(lst)
+"""
+#======================================================================================
+#product of numbers in a list
+"""
+a = [1,2,3,4,5]
+b = [6,7,8,9,3]
+lst = [a[i]*b[i] for i in range(len(a))]
+print(lst)
+"""
+#======================================================================================
+#common element in a list
+"""
+a = [1,2,3,4,5]
+b = [2,4,6,7,9]
+lst = [i for i in a if i in b]
+print(lst)
+"""
+#======================================================================================
