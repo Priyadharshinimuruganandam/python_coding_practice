@@ -1,0 +1,54 @@
+class phone:
+    def __init__(self, name, description, price):
+        self.name = name
+        self.description = description
+        self.price = price
+
+    def Login(self):
+        print("Iphone successfully logged In")
+
+    def Update(self):
+        print("Iphone Updated"+"\n")
+
+class phone_1(phone):
+    def __init__(self, function, name, description, price):
+        super().__init__(name, description, price) #super function
+        self.function = function
+        
+
+class phone_2(phone):
+    def __init__(self, model, name, description, price):
+        phone.__init__(self, name, description, price)#normal inheritance
+        self.model = model
+
+#with super 
+phone_1 = phone_1("touch","Iphone","Awesome",700)
+print(phone_1.function)
+print(phone_1.name)
+print(phone_1.description)
+print(phone_1.price)
+
+phone_1.Login()
+phone_1.Update()
+
+#normal Inheritance
+phone_2 = phone_2("new","Iphone","Awesome",700)
+print(phone_2.model)
+print(phone_2.name)
+print(phone_2.description)
+print(phone_2.price)
+
+phone_2.Login()
+phone_2.Update()
+
+
+
+
+
+
+
+
+
+
+
+
